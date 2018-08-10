@@ -1,0 +1,17 @@
+[2018-08-01 15:42:01,610: INFO/MainProcess] Connected to redis://:**@47.97.163.79:6379/1
+[2018-08-01 15:42:01,622: INFO/MainProcess] mingle: searching for neighbors
+[2018-08-01 15:42:02,665: INFO/MainProcess] mingle: all alone
+[2018-08-01 15:42:02,684: INFO/MainProcess] pidbox: Connected to redis://:**@47.97.163.79:6379/1.
+[2018-08-01 15:42:34,124: INFO/MainProcess] Received task: celery_tasks.tasks.send_register_active_email[13281f72-8fd3-4ab9-8f19-5edd481f0a53]  
+[2018-08-01 15:42:34,127: INFO/MainProcess] task正在发送激活邮件
+[2018-08-01 15:42:35,568: INFO/MainProcess] 邮件发送成功
+[2018-08-01 15:48:53,477: INFO/MainProcess] Received task: celery_tasks.tasks.send_register_active_email[32875a7d-76c6-4165-b628-cf95b526ec27]  
+[2018-08-01 15:48:53,478: INFO/MainProcess] task正在发送激活邮件
+[2018-08-01 15:48:54,928: INFO/MainProcess] 邮件发送成功
+[2018-08-01 15:54:05,298: INFO/MainProcess] Received task: celery_tasks.tasks.send_register_active_email[3072831c-83e1-44ac-8678-acfb943690ca]  
+[2018-08-01 15:54:05,299: INFO/MainProcess] task正在发送激活邮件
+[2018-08-01 15:54:07,255: INFO/MainProcess] 邮件发送成功
+[2018-08-01 17:25:50,518: INFO/MainProcess] Connected to redis://:**@47.97.163.79:6379/1
+[2018-08-01 17:25:50,539: INFO/MainProcess] mingle: searching for neighbors
+[2018-08-01 17:25:51,585: INFO/MainProcess] mingle: all alone
+[2018-08-01 17:25:51,602: INFO/MainProcess] pidbox: Connected to redis://:**@47.97.163.79:6379/1.

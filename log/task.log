@@ -1,0 +1,8 @@
+2018-07-31 17:40:01,544 INFO     /home/fushentang/celery_tasks/tasks.py[line:32] task正在发送激活邮件
+2018-07-31 17:49:20,352 INFO     /home/fushentang/celery_tasks/tasks.py[line:32] task正在发送激活邮件
+2018-07-31 17:53:06,694 INFO     /home/fushentang/celery_tasks/tasks.py[line:32] task正在发送激活邮件
+2018-07-31 17:53:07,722 INFO     /home/fushentang/celery_tasks/tasks.py[line:46] Error: 无法发送邮件
+2018-07-31 17:55:25,217 INFO     /home/fushentang/celery_tasks/tasks.py[line:32] task正在发送激活邮件
+2018-07-31 17:55:26,497 INFO     /home/fushentang/celery_tasks/tasks.py[line:43] 邮件发送成功
+2018-07-31 17:57:17,949 INFO     /home/fushentang/celery_tasks/tasks.py[line:32] task正在发送激活邮件
+2018-07-31 17:57:19,689 INFO     /home/fushentang/celery_tasks/tasks.py[line:43] 邮件发送成功

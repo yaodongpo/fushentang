@@ -1,0 +1,1392 @@
+2018-07-30 10:38:23,258 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\user\views.py", line 89, in post
+    send_register_active_email.delay(email, username, token)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 413, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 536, in apply_async
+    **options
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 736, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 1183, in backend
+    return self._get_backend()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 901, in _get_backend
+    self.loader)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 66, in by_url
+    return by_name(backend, loader), url
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 46, in by_name
+    cls = symbol_by_name(backend, aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\imports.py", line 56, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\backends\redis.py", line 21
+    from . import async
+                      ^
+SyntaxError: invalid syntax
+2018-07-30 10:38:25,655 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /user/register HTTP/1.1" 500 175259
+2018-07-30 15:24:53,856 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /goods/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'sku_id'
+2018-07-30 15:24:54,198 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /goods/1 HTTP/1.1" 500 76140
+2018-07-30 15:32:22,179 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /goods/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'sku_id'
+2018-07-30 15:32:22,490 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /goods/1 HTTP/1.1" 500 76140
+2018-07-30 15:32:30,323 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /goods/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'sku_id'
+2018-07-30 15:32:30,364 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /goods/1 HTTP/1.1" 500 76139
+2018-07-30 15:43:27,255 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /goods/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 102, in get
+    if user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:43:27,614 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /goods/1 HTTP/1.1" 500 82073
+2018-07-30 15:44:25,014 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/add
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 24, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:44:25,296 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/add HTTP/1.1" 500 18169
+2018-07-30 15:44:27,389 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/add
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 24, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:44:27,419 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/add HTTP/1.1" 500 18169
+2018-07-30 15:44:27,748 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/add
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 24, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:44:27,764 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/add HTTP/1.1" 500 18169
+2018-07-30 15:44:27,779 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/add
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 24, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:44:27,795 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/add HTTP/1.1" 500 18169
+2018-07-30 15:44:28,493 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/add
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 24, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:44:28,540 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/add HTTP/1.1" 500 18169
+2018-07-30 15:47:43,101 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:45,076 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18182
+2018-07-30 15:47:45,262 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:45,287 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18181
+2018-07-30 15:47:45,459 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:45,475 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18181
+2018-07-30 15:47:45,651 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:45,667 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18182
+2018-07-30 15:47:48,051 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:48,091 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18181
+2018-07-30 15:47:48,794 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:48,810 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18181
+2018-07-30 15:47:49,902 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:49,919 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18182
+2018-07-30 15:47:51,315 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:51,334 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18181
+2018-07-30 15:47:55,118 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/delete
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 183, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:47:55,149 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/delete HTTP/1.1" 500 18167
+2018-07-30 15:48:14,892 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/delete
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 183, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:48:14,924 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/delete HTTP/1.1" 500 18167
+2018-07-30 15:49:05,532 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/commit
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 74, in inner
+    return func(*args, **kwds)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 210, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:49:05,578 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/commit HTTP/1.1" 500 18354
+2018-07-30 15:49:28,319 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/commit
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 74, in inner
+    return func(*args, **kwds)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 210, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:49:28,335 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/commit HTTP/1.1" 500 18354
+2018-07-30 15:50:03,836 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/pay
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 344, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 15:50:03,882 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/pay HTTP/1.1" 500 18183
+2018-07-30 15:50:25,162 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/pay
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 364, in post
+    alipay = AliPay(
+NameError: name 'AliPay' is not defined
+2018-07-30 15:50:25,473 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/pay HTTP/1.1" 500 18166
+2018-07-30 15:50:34,912 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/pay
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 364, in post
+    alipay = AliPay(
+NameError: name 'AliPay' is not defined
+2018-07-30 15:50:34,943 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/pay HTTP/1.1" 500 18166
+2018-07-30 16:08:57,981 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/pay
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 371, in post
+    debug=True  # ƒ¨»œFalse
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\alipay\__init__.py", line 81, in __init__
+    self._load_key()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\alipay\__init__.py", line 87, in _load_key
+    with open(self._app_private_key_path) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ThinHeader\\fushentang\\apps/order/app_private_key.pem'
+2018-07-30 16:08:58,287 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/pay HTTP/1.1" 500 18643
+2018-07-30 16:10:32,626 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/check
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 399, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 16:10:32,936 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/check HTTP/1.1" 500 18192
+2018-07-30 16:15:15,489 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /order/check
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1384, in connect
+    super().connect()
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\order\views.py", line 431, in post
+    response = alipay.api_alipay_trade_query(order_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\alipay\__init__.py", line 304, in api_alipay_trade_query
+    raw_string = urlopen(url, timeout=15).read().decode("utf-8")
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1360, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+2018-07-30 16:15:15,911 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /order/check HTTP/1.1" 500 21098
+2018-07-30 16:36:55,543 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /list/6/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 198, in get
+    if user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 16:36:55,679 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /list/6/1 HTTP/1.1" 500 83088
+2018-07-30 16:37:24,239 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 16:37:24,256 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18182
+2018-07-30 16:37:26,980 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /cart/update
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\cart\views.py", line 127, in post
+    if not user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 16:37:27,021 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /cart/update HTTP/1.1" 500 18182
+2018-07-30 16:41:17,063 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /list/6/1
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 198, in get
+    if user.is_authenticated():
+TypeError: 'bool' object is not callable
+2018-07-30 16:41:17,462 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /list/6/1 HTTP/1.1" 500 83088
+2018-07-31 07:41:15,971 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 582, in connect
+    **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 62, in get
+    if user.is_authenticated:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 215, in inner
+    self._setup()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\__init__.py", line 218, in get_user
+    user = backend.get_user(user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\backends.py", line 101, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 1055, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 461, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\where.py", line 80, in as_sql
+    sql, params = compiler.compile(child)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 160, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 153, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\fields\__init__.py", line 648, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 133, in data_types
+    if self.features.supports_microsecond_precision:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\features.py", line 65, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 343, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 576, in temporary_connection
+    cursor = self.cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 255, in cursor
+    return self._cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 232, in _cursor
+    self.ensure_connection()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+2018-07-31 07:41:19,001 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 500 313506
+2018-07-31 07:41:31,732 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 582, in connect
+    **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 62, in get
+    if user.is_authenticated:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 215, in inner
+    self._setup()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\__init__.py", line 218, in get_user
+    user = backend.get_user(user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\backends.py", line 101, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 1055, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 461, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\where.py", line 80, in as_sql
+    sql, params = compiler.compile(child)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 160, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 153, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\fields\__init__.py", line 648, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 133, in data_types
+    if self.features.supports_microsecond_precision:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\features.py", line 65, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 343, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 576, in temporary_connection
+    cursor = self.cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 255, in cursor
+    return self._cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 232, in _cursor
+    self.ensure_connection()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+2018-07-31 07:41:32,231 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 500 313642
+2018-07-31 07:42:15,721 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 582, in connect
+    **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\goods\views.py", line 62, in get
+    if user.is_authenticated:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 215, in inner
+    self._setup()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 349, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\__init__.py", line 218, in get_user
+    user = backend.get_user(user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\auth\backends.py", line 101, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 1055, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 461, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\where.py", line 80, in as_sql
+    sql, params = compiler.compile(child)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\compiler.py", line 393, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 160, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\lookups.py", line 153, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\fields\__init__.py", line 648, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 133, in data_types
+    if self.features.supports_microsecond_precision:
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\features.py", line 65, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 343, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 576, in temporary_connection
+    cursor = self.cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 255, in cursor
+    return self._cursor()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 232, in _cursor
+    self.ensure_connection()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\backends\mysql\base.py", line 234, in get_new_connection
+    return Database.connect(**conn_params)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\pymysql\connections.py", line 629, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '47.97.163.79' ([WinError 10048] Õ®≥£√ø∏ˆÃ◊Ω”◊÷µÿ÷∑(–≠“È/Õ¯¬Áµÿ÷∑/∂Àø⁄)÷ª‘ –Ì π”√“ª¥Œ°£)")
+2018-07-31 07:42:16,605 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 500 313135
+2018-07-31 08:30:25,734 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 500 59
+2018-07-31 09:02:28,334 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\user\views.py", line 90, in post
+    send_register_active_email.delay(email, username, token)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 408, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 535, in apply_async
+    **options
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 744, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 1196, in backend
+    return self._get_backend()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 914, in _get_backend
+    self.loader)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 70, in by_url
+    return by_name(backend, loader), url
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 50, in by_name
+    cls = symbol_by_name(backend, aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\imports.py", line 56, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\backends\redis.py", line 22
+    from . import async, base
+                      ^
+SyntaxError: invalid syntax
+2018-07-31 09:02:30,620 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /user/register HTTP/1.1" 500 176327
+2018-07-31 09:28:36,564 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\user\views.py", line 90, in post
+    send_register_active_email.delay(email, username, token)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 408, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 535, in apply_async
+    **options
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 744, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 1196, in backend
+    return self._get_backend()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 914, in _get_backend
+    self.loader)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 70, in by_url
+    return by_name(backend, loader), url
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 50, in by_name
+    cls = symbol_by_name(backend, aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\imports.py", line 56, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\backends\redis.py", line 22
+    from . import async, base
+                      ^
+SyntaxError: invalid syntax
+2018-07-31 09:28:38,759 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /user/register HTTP/1.1" 500 176810
+2018-07-31 09:57:25,778 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\user\views.py", line 90, in post
+    send_register_active_email.delay(email, username, token)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 408, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 535, in apply_async
+    **options
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 744, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 1196, in backend
+    return self._get_backend()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 914, in _get_backend
+    self.loader)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 70, in by_url
+    return by_name(backend, loader), url
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 50, in by_name
+    cls = symbol_by_name(backend, aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\imports.py", line 56, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\backends\redis.py", line 22
+    from . import async, base
+                      ^
+SyntaxError: invalid syntax
+2018-07-31 09:57:28,406 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /user/register HTTP/1.1" 500 176800
+2018-07-31 10:08:24,088 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\user\views.py", line 90, in post
+    send_register_active_email.delay(email, username, token)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 408, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 535, in apply_async
+    **options
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 744, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 1196, in backend
+    return self._get_backend()
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\base.py", line 914, in _get_backend
+    self.loader)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 70, in by_url
+    return by_name(backend, loader), url
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\backends.py", line 50, in by_name
+    cls = symbol_by_name(backend, aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\kombu\utils\imports.py", line 56, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "C:\Users\ThinHeader\AppData\Local\Programs\Python\Python37\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\backends\redis.py", line 22
+    from . import async, base
+                      ^
+SyntaxError: invalid syntax
+2018-07-31 10:08:26,397 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /user/register HTTP/1.1" 500 176792
+2018-07-31 10:19:15,582 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /admin/goods/goodssku/3/change/
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 575, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1557, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1451, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1491, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\ThinHeader\fushentang\goods\admin.py", line 16, in save_model
+    generate_static_index_html()  # .delay ÊöÇÊó∂Â±èËîΩ
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\local.py", line 191, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 375, in __call__
+    return self.run(*args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\celery_tasks\tasks.py", line 49, in generate_static_index_html
+    image_banner = IndexTypeGoodsBanner.objects.filter(category=category, display_type=1)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: create_time, display_type, id, index, is_delete, sku, sku_id, type, type_id, update_time
+2018-07-31 10:19:15,768 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /admin/goods/goodssku/3/change/ HTTP/1.1" 500 176704
+2018-07-31 10:20:54,099 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /admin/goods/goodssku/3/change/
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 575, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1557, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1451, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1491, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\ThinHeader\fushentang\goods\admin.py", line 16, in save_model
+    generate_static_index_html()  # .delay ÊöÇÊó∂Â±èËîΩ
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\local.py", line 191, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 375, in __call__
+    return self.run(*args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\celery_tasks\tasks.py", line 49, in generate_static_index_html
+    image_banner = IndexTypeGoodsBanner.objects.filter(category=category, display_type=1)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: create_time, display_type, id, index, is_delete, sku, sku_id, type, type_id, update_time
+2018-07-31 10:20:54,290 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /admin/goods/goodssku/3/change/ HTTP/1.1" 500 176704
+2018-07-31 10:21:37,242 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /admin/goods/goodstype/add/
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 575, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1554, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1451, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1491, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\ThinHeader\fushentang\goods\admin.py", line 16, in save_model
+    generate_static_index_html()  # .delay ÊöÇÊó∂Â±èËîΩ
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\local.py", line 191, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 375, in __call__
+    return self.run(*args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\celery_tasks\tasks.py", line 49, in generate_static_index_html
+    image_banner = IndexTypeGoodsBanner.objects.filter(category=category, display_type=1)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: create_time, display_type, id, index, is_delete, sku, sku_id, type, type_id, update_time
+2018-07-31 10:21:37,409 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /admin/goods/goodstype/add/ HTTP/1.1" 500 175311
+2018-07-31 10:41:39,564 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /admin/goods/goodssku/3/change/
+Traceback (most recent call last):
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 575, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1557, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1451, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\contrib\admin\options.py", line 1491, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\ThinHeader\fushentang\goods\admin.py", line 16, in save_model
+    generate_static_index_html()  # ÊöÇÊó∂Â±èËîΩceleryÊñπÂºèÔºåÊîπ‰∏∫Áõ¥Êé•Ë∞ÉÁî®„ÄÇÔºà.delayÔºâ
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\local.py", line 191, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\celery\app\task.py", line 375, in __call__
+    return self.run(*args, **kwargs)
+  File "C:\Users\ThinHeader\fushentang\celery_tasks\tasks.py", line 73, in generate_static_index_html
+    static_html = temp.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\urls\resolvers.py", line 636, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'order' with no arguments not found. 1 pattern(s) tried: ['user/order/(?P<page>\\d+)$']
+2018-07-31 10:41:40,002 ERROR    C:\Users\ThinHeader\venv\pythoninterpreter\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /admin/goods/goodssku/3/change/ HTTP/1.1" 500 225864
