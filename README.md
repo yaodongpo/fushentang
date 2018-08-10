@@ -15,10 +15,7 @@ session基于Redis存储
 支付宝接口
 详细代码说明
 运行环境：
-见requirements.txt:运行如下命令可安装
-
-pip install -r requirements.txt
-amqp==2.2.2 anyjson==0.3.3 billiard==3.5.0.3 celery==4.1.0 certifi==2018.1.18 chardet==3.0.4 Django==1.8.2 django-bootstrap3==9.1.0 django-celery==3.2.2 django-celery-results==1.0.1 django-haystack==2.7.0 django-redis==4.7.0 django-tinymce==2.7.0 fdfs-client-py==1.2.6 idna==2.6 itsdangerous==0.24 jieba==0.39 kombu==4.1.0 mutagen==1.40.0 Pillow==5.0.0 pycryptodomex==3.5.1 PyMySQL==0.8.0 python-alipay-sdk==1.7.0 pytz==2018.3 redis==2.10.6 reportlab==3.4.0 requests==2.18.4 urllib3==1.22 uWSGI==2.0.17 vine==1.1.4 Whoosh==2.7.4
+见requirements.txt
 
 代码中未有的常见问题：
 一个常见的问题: mySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据：
